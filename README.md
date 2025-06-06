@@ -1,28 +1,33 @@
-# To-Do List Website - Tododee List
-to do list page inspired by todoist
-signup/signup inspired by microsoft
+# TODODEE 
+A full-stack to-do list web app with user authentication, task filtering by status and deadline, and clean UI built with Node.js, Express, MySQL, and Pug.
 
 ## Features Implemented
+### User Authentication
 - Account Creation & Deletion
-- Filter & Mark Tasks (done, in progress, due soon, due later, overdue)
-- Add & Delete Tasks 
 - Password Hashing
-- Specific user pages
+- User-specific task pages
+### Task Management
+- Add and Delete Tasks 
+- Filter tasks by status
+- Mark tasks as done, in progress, due soon, due later, overdue
+### Frontend & UI
 - Flexbox
 - Pug templating
-- Advanced Feature: Deadlines
-    - Assign deadlines to items (past days are considered overdue EX: 01-01-2025)
-    - Sort items by deadline (date)
-    - View Overdue Items
+- Responsive Design
+### Deadlines & Sorting (Advanced Feature)
+- Assign deadlines to items (past days are considered overdue EX: 01-01-2025)
+- Sort items by deadline 
+- View Overdue Items
 
-## URL
-'/' - Todo list Homepage (needs login)
+### URL Structure
+'/' - Main to-do list page (requires login)
+
+### Use the following credentials to try the To-Do website!
+- username: username
+- password: password
 
 
-## SQL
-mysql -uC4131S25S01U47 -hcse-mysql-classes-01.cse.umn.edu -P3306 -p C4131S25S01U47
-tinatran
 
-## Test Account
-username: username
-password: password
+### Screenshots
+![image](https://github.com/user-attachments/assets/12620106-0bdb-4733-8dde-d300aa56c10e)
+![image](https://github.com/user-attachments/assets/16c3c6e3-4483-4234-b9de-1a834deed72a)
