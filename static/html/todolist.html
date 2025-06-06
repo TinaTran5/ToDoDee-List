@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tododee List</title>
+    <link rel="stylesheet" href="/css/todo.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="icon" href="/img/tododee.svg">
+</head>
+<body>
+    <main>
+        <section class="left-container">
+            <div class="profile-container">
+                <img class="profile" src="/img/profile.svg" alt="profile">
+                <h3></h3>
+            </div>
+            <div class="bottom-container">
+                <form action="/logout" method="POST">
+                    <button type="submit" class="logout-btn">
+                    <img src="/img/logout.svg" alt="logout" width="16px">Log out</button>
+                </form>
+                <form action="/delete-account" method="POST">
+                    <button type="submit" class="delete-account">
+                        <img src="/img/warning.svg" width="16px">Delete Account</button>
+                </form>
+            </div>
+        </section>
+        <section class="right-container">
+        <h1>TODODEE</h1>
+        <div class="task-container">
+            <button id="form-btn">+ Add Task</button>
+            
+            <div class="filter-container">
+                <button id="filter-btn">Filter</button>
+                <div id="filter-options" class="filter-options">
+                    <div class="filter-option" id="soon">Due Soon</div>
+                    <div class="filter-option" id="later">Due Later</div>
+                    <div class="filter-option" id="done">Done</div>
+                    <div class="filter-option" id="in-progress">In Progress</div>
+                    <div class="filter-option" id="overdue">Overdue</div>
+                  </div>
+            </div>
+   
+            <form id="task-form" action="/add-task" method="POST" style="display:none">
+                <input class="task-name" type="text" name="task_name" placeholder="Task Name" required>
+                <input type="date" name="due_date" min="2025-01-01" max="2999-12-31" required>
+                <select name="status">
+                    <option value="In progress">in progress</option>
+                    <option value="Done">done</option>
+                </select>   
+                <div class="buttons">
+                    <button id="cancel" type="button">Cancel</button>
+                    <button id="add" type="submit">Add Task</button>
+                </div>
+            </form>
+
+            <!-- todolist items -->
+            <div id="task-list" class="task-list"></div>
+        </div>
+        </div> 
+
+
+        </section>
+    </main>
+    <script src="/js/todolist.js"></script>
+</body> 
+</html>

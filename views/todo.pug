@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Tododee List
+    link(rel='stylesheet', href='/css/todo.css')
+    link(rel='stylesheet', href='/css/layout.css')
+    link(rel='icon', href='/img/tododee.svg')
+  body
+    main
+      section.left-container
+        .profile-container
+          img.profile(src='/img/profile.svg', alt='profile')
+          h3 #{username}
+        .bottom-container
+          form(action='/logout', method='POST')
+            button.logout-btn(type='submit')
+              img(src='/img/logout.svg', alt='logout', width='16px')
+              | Log out
+          form(action='/delete-account', method='POST')
+            button.delete-account(type='submit')
+              img(src='/img/warning.svg', width='16px')
+              | Delete Account
+      section.right-container
+        h1 TODODEE
+        .task-container
+          button#form-btn + Add Task
+          .filter-container
+            button#filter-btn Filter
+            #filter-options.filter-options
+              #soon.filter-option Due Soon
+              #later.filter-option Due Later
+              #done.filter-option Done
+              #in-progress.filter-option In Progress
+              #overdue.filter-option Overdue
+          form#task-form(action='/add-task', method='POST', style='display:none')
+            input.task-name(type='text', name='task_name', placeholder='Task Name', required='')
+            input(type='date', name='due_date', min='2025-01-01', max='2999-12-31', required='')
+            select(name='status')
+              option(value='In progress') in progress
+              option(value='Done') done
+            .buttons
+              button#cancel(type='button') Cancel
+              button#add(type='submit') Add Task
+          // todolist items
+          #task-list.task-list
+    script(src='/js/todolist.js')

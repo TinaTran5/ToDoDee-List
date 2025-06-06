@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="icon" href="/img/tododee.svg">
+
+</head>
+<body>
+    <div class="form-container">
+        <h1>Sign Up</h1>
+        <form action="/signup" method="POST">
+            <label for="username"></label>
+            <input type="text" id="username" name="username" placeholder="Username" pattern="[A-Za-z0-9_]{3,15}" title="3-15 characters long" required>
+            <label for="password"></label>
+            <input type="text" id="password" name="password" placeholder="Password" pattern="[A-Za-z0-9_]{3,15}" required>
+            <button class="btn" type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/html/signin.html">Sign In</a></p>
+    </div>
+</body>
+</html>

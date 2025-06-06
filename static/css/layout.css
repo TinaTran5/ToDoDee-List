@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Forta';
+    src: url('/fonts/Forta.ttf');
+}
+
+
+body, html {
+    font-family: 'Forta'
+}
